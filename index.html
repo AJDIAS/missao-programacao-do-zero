@@ -16,99 +16,114 @@
     <div class="caixa-superior">
         <div class="cabecalho">
             <h2 class="titulo-cabecalho">Dev Contábil</h2>
-            <a class="link-cabecalho">Quem somos</a>
-            <a class="link-cabecalho">Serviços</a>
-            <a class="link-cabecalho">Contato</a>
+            <a class="link-cabecalho" href="#titulo-inferior">Quem somos</a>
+            <a class="link-cabecalho" href="#titulo-meio">Serviços</a>
+            <a class="link-cabecalho" onclick="chameOAbacate()">Contato</a>
         </div>
 
         <h1>Dev Contábil</h1>
 
-        <form>
+        <form id="formulario-contato" action="https://formsubmit.co/dias.ademirj@gmail.com" method="POST">
             <h3 class="titulo-formulario">Entre em contato</h3>
             <label>
                 Nome
-                <input placeholder="Digite seu Nome" />
+                <input type="text" name="Nome" placeholder="Digite seu nome" required/>
             </label>
 
             <label>
                 E-mail
-                <input placeholder="Digite seu E-mail" />
+                <input type="email" name="e-mail" placeholder="Digite seu e-mail" required/>
+            </label>
+
+            <label>
+                WhatsApp
+                <input type="tel" name="telefone" placeholder="Digite seu telefone" required/>
             </label>
 
             <label>
                 Fale Conosco
-                <textarea placeholder="Qual sua dúvida?"></textarea>
+                <textarea name="Info" placeholder="Qual a sua dúvida"></textarea>
             </label>
 
-            <button>Enviar</button>
+            <button type="submit">Enviar</button>
         </form>
     </div>
 
-    <h2 class="titulo-meio">Nossos serviços</h2>
+    <h2 class="titulo-meio">Nossos serviços<a name="titulo-meio"></a></h2>
 
     <div class="caixa-central">
         <div class="card">
+            <img src="Contabilidade-completa.jpg" alt="some text" width=300 height=200>
             <h3 class="titulo-card">Contabilidade Completa</h3>
             <ul>
-                <li>Primeiro item da lista</li>
-                <li>Segundo item da lista</li>
-                <li>Terceiro item da lista</li>
-                <li>Quarto item da lista</li>
-                <li>Quinto item da lista</li>
-                <li>Sexto item da lista</li>
+                <li>Gestão contábil,     </li>
+                <li>Fiscal,</li>
+                <li>Tributária,</li>
+                <li>Trabalhista e</li>
+                <li>Societária para abertura e</li>
+                <li>Legalização de empresas.</li>
             </ul>
         </div>
 
         <div class="card">
+            <img src="Cuidamos-do-seu-negocio.jpg" alt="some text" width=300 height=200>
             <h3 class="titulo-card">Cuidamos do seu negócio</h3>
             <ul>
-                <li>Primeiro item da lista</li>
-                <li>Segundo item da lista</li>
-                <li>Terceiro item da lista</li>
-                <li>Quarto item da lista</li>
-                <li>Quinto item da lista</li>
-                <li>Sexto item da lista</li>
+                <li>Planejamento Tributário,</li>
+                <li>Diagnóstico Empresarial,</li>
+                <li>Recuperação de Impostos,</li>
+                <li>Regularização de Tributos,</li>
+                <li>Assessoria para Novos Negócios</li>
+                
             </ul>
         </div>
 
         <div class="card">
+            <img src="Cuidamos-de-voce.jpg" alt="some text" width=300 height=200>
             <h3 class="titulo-card">Cuidamos de você</h3>
             <ul>
-                <li>Primeiro item da lista</li>
-                <li>Segundo item da lista</li>
-                <li>Terceiro item da lista</li>
-                <li>Quarto item da lista</li>
-                <li>Quinto item da lista</li>
-                <li>Sexto item da lista</li>
+                <li>Ajudamos empresas de diferentes portes e segmentos.</li>
+                <li>Atendimento Humanizado.</li>
+                <li>Central de Negócios e Treinamentos.</li>
+                <li>Tecnologia e Ferramentas Digitais.</li>
+                <li>Profissionais Especializados.</li>
+                
             </ul>
         </div>
     </div>
 
 
     <div class="caixa-inferior">
-        <h2 class="titulo-inferior">Sobre nós</h2>
+        <h2 class="titulo-inferior">Sobre nós<a name="titulo-inferior"></a></h2>
         <p class="paragrafo-inferior">
-            Estamos presente no mercado há mais de 4 décadas auxiliando nossos clientes nacionais e internacionais que
-            já
+            Estamos presente no mercado há mais de 4 décadas auxiliando nossos clientes nacionais e internacionais
+            que já
             atuam ou desejam abrir seus negócios e ingressar no Brasil.
-
+            
             Assessoramos investidores que queiram prospectar seus negócios no Brasil e investidores (“brasileiros”)
             interessados em fazer negócios em outros países.
             Oferecemos “backoffice” nas áreas Financeira, Recursos Humanos, Tributária e Contabilidade, inclusive a
             abertura, legalização e regularização de empresas e negócios.
-
-            Com pesquisas de mercado, montamos toda estrutura organizacional, ambiente operacional e logística de suas
-            atividades, com profissionais qualificados, competentes e continuamente treinados.
-
-            Somos especialistas em empresas tributadas pelo LUCRO REAL e Contabilidade em IFRS. Assim, o Planejamento
-            das
-            Operações e suas consequências tributárias passam a ser condições de competitividade, inclusive sugerindo
-            incorporação ou desmembramento de atividades.
+            
+            Com pesquisas de mercado, montamos toda estrutura organizacional, ambiente operacional e logística de
+            suas atividades, com profissionais qualificados, competentes e continuamente treinados.
+            
+            Somos especialistas em empresas tributadas pelo LUCRO REAL e Contabilidade em IFRS. Assim, o
+            Planejamento
+            das Operações e suas consequências tributárias passam a ser condições de competitividade, inclusive
+            sugerindo incorporação ou desmembramento de atividades.
         </p>
     </div>
 
 
 
 </body>
-
+<script>
+    let formulario = document.getElementById("formulario-contato")
+    
+    
+    function chameOAbacate(){
+        formulario.className = "mostrar-formulario"
+    }
+</script>
 </html>
